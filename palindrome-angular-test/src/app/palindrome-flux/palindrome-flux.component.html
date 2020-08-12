@@ -1,0 +1,17 @@
+<h2>Palindrome using Flux</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Label</th>
+            <th scope="col">Palindrome ?</th>
+        </tr>
+    </thead>
+    <tbody> 
+        <tr *ngFor='let palindrome of palindromeFluxList | async' [ngClass]="isPalindrome(palindrome.label) ? 'palindrome': 'not-palindrome'">
+            <td>{{palindrome.id}}</td>
+            <td>{{palindrome.label}}</td>
+            <td>{{isPalindrome(palindrome.label)}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,13 @@
+<h2>Palindrome using URL</h2>
+<!-- Error while parsing the root-->
+<div *ngIf="isParseInError" class="alert alert-danger" style="margin-top: 20px;" role="alert">
+    L'url doit commencer par <b>'/start/**'</b>
+</div>
+<!-- the word is not a palindrome -->
+<div *ngIf="!isPalindrome && !isParseInError" class="alert alert-warning" style="margin-top: 20px;" role="alert">
+    <b>Le mot n'est pas un palindrome</b>
+</div>
+<!-- the word is a palindrome -->
+<div *ngIf="isPalindrome" class="alert alert-success" style="margin-top: 20px;" role="alert">
+    <b>Le mot est un palindrome</b>
+</div>
